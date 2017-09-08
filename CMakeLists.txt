@@ -10,6 +10,6 @@ set(TBB_INCLUDE_DIRS "${TBB_ROOT}/include")
 set(TBB_LIBRARIES ${TBB_IMPORTED_TARGETS})
 
 add_executable(tbb-test src/tbb_test.cpp)
-set_property(TARGET tbb-test PROPERTY CXX_STANDARD 14)
+set_property(TARGET tbb-test PROPERTY CXX_STANDARD 11)
 target_link_libraries(tbb-test ${TBB_LIBRARIES} pthread)
 target_include_directories(tbb-test PRIVATE ${TBB_INCLUDE_DIRS})
